@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>AIO Lunch</title>
+  <!-- base:css -->
+  <link rel="stylesheet" href="assets/css/themify-icons.css">
+  <link rel="stylesheet" href="assets/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="assets/css/select2-bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/select2.min.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="assets/images/favicon.png" />
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_sidebar.html -->
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-content-wrapper sidebar-offcanvas">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="ti-home menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+      <!-- partial -->
+      <!-- partial:partials/_navbar.html --> 
+      <nav class="navbar p-0 d-flex flex-row">
+        <div class="navbar-menu-wrapper d-flex align-items-center">
+          <div class="navbar-brand-wrapper d-flex align-items-center justify-content-center">
+            <a class="navbar-brand brand-logo" href="index.html"><img src="assets/images/logo.svg" alt="logo"/></a>
+            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo"/></a>
+          </div>
+          <ul class="navbar-nav navbar-nav-right ml-auto">
+            <li class="nav-item nav-profile dropdown">
+              <a class="nav-link" href="#" data-toggle="dropdown" id="profileDropdown">
+                <img src="assets/images/face8.jpg" alt="profile"/>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                <a class="dropdown-item">
+                  <i class="ti-settings text-primary"></i>
+                  Settings
+                </a>
+                <a class="dropdown-item">
+                  <i class="ti-new-window text-primary"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="ti-menu"></span>
+          </button>
+        </div>
+      </nav> 
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">  
+                  <form class="forms-sample">
+                    <div class="form-group">
+                      <label for="select">Peserta</label>
+                      <select class="form-control" id="select">
+                        <option>Ridho</option>
+                        <option>Wahyu</option>
+                        <option>Ijul</option>
+                        <option>Ruri</option>
+                        <option>Fanny</option>
+                        <option>Achy</option>
+                      </select>
+                    </div>
+                      <div class="form-group">
+                        <label >Harga Aplikasi</label>
+                        <input type="text" id="hargaAplikasi" class="form-control money"  placeholder="Harga Aplikasi">
+                      </div>
+                     
+                    <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">  
+                  <form class="forms-sample">
+                    <div class="form-group">
+                      <label >Grand Total</label>
+                      <input type="text" id="grandTotal" class="form-control money"  placeholder="Grand Total">
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col">
+                        <label >Total Aplikasi</label>
+                        <input type="text" style="color:black" id="totalAplikasi" readonly class="form-control money"  placeholder="0">
+                      </div>
+                      <div class="form-group col">
+                        <label >Selisih</label>
+                        <input type="text" style="color:black" id="selisih" readonly class="form-control money"  placeholder="0">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>Peserta</th>
+                          <th>Harga Aplikasi</th>
+                          <th>Harga Bayar</th>
+                          <th>Bayar Actual</th>
+                          <th>Selisih Actual</th>
+                          <th>Status</th>
+                          <th><i class="ti-settings"></i></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-center text-sm-left d-block d-sm-inline-block">Copyright © 2019<a href="#" target="_blank" class="ml-1">AIO Lunch</a>. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Designed by: UrbanUI<i class="ti-heart text-danger ml-1"></i></span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- base:js -->
+  <script src="assets/js/vendor.bundle.base.js"></script>
+  <script src="assets/js/simple.money.format.js"></script>
+  <script src="assets/js/select2.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#select').select2();
+      $('.money').simpleMoneyFormat();
+      $(document).on('submit','.forms-sample',function(e){
+        e.preventDefault();
+        if ($('#grandTotal').val() == "") {
+          return alert("Isi Grand Total")
+        }
+        if ($('#hargaAplikasi').val() == "") {
+          return alert("Isi Harga Aplikasi")
+        }
+        var peserta = $('#select').val();
+        var grandTotal = $('#grandTotal').val();
+        var hargaAplikasi = $('#hargaAplikasi').val();
+        $('.table').append(`
+          <tr>
+            <td>`+peserta+`</td>
+            <td class="tdHargaAplikasi">`+hargaAplikasi+`</td>
+            <td class="tdHargaBayar money">0</td>
+            <td><input type="text" class="form-control money tdBayarActual"  placeholder="Bayar Actual"></td>
+            <td class="tdSelisihActual money">0</td>
+            <td><label class="badge badge-gradient-danger">Pending</label></td>
+            <td><a href="#" class="delete"><i class="ti-trash"></i></a></td>
+          </tr>
+        `)
+        var sum= 0;
+        // iterate through each td based on class and add the values
+        $(".tdHargaAplikasi").each(function() {
+          var value = $(this).text();
+          value = value.replace(',', ''); 
+          sum+= parseInt(value)
+        });
+        $('#totalAplikasi').val(sum)
+        $(".tdHargaAplikasi").each(function() {
+          var value = $(this).text();
+          value = value.replace(',', ''); 
+          var tdHargaBayar = Math.ceil(Math.ceil((parseInt(value)/sum)*parseInt(grandTotal.replace(',','')))/1000)*1000;
+          $(this).closest("tr").find('.tdHargaBayar').text(tdHargaBayar);
+        });
+        $('.money').simpleMoneyFormat();
+      })
+      $(document).on('click','.delete',function(e){
+        e.preventDefault();
+
+        
+        var hargaAplikasi = $(this).closest("tr").find('.tdHargaAplikasi').text().replace(',','');
+        var totalAplikasi = $('#totalAplikasi').val().replace(',','') - hargaAplikasi;
+        $('#totalAplikasi').val(totalAplikasi)
+        var grandTotal = $('#grandTotal').val();
+        $(".tdHargaAplikasi").each(function() {
+          var value = $(this).text();
+          value = value.replace(',', ''); 
+          var tdHargaBayar = Math.ceil(Math.ceil((parseInt(value)/totalAplikasi)*parseInt(grandTotal.replace(',','')))/1000)*1000;
+          $(this).closest("tr").find('.tdHargaBayar').text(tdHargaBayar);
+        });
+        var tdBayarActual = $(this).closest("tr").find('.tdBayarActual').val().replace(',','');
+        if(!isNaN(tdBayarActual) && tdBayarActual.length != 0) {
+          var selisih = $('#selisih').val().replace(',','');
+          $('#selisih').val(selisih - tdBayarActual)
+        }
+        $(this).closest("tr").remove();
+        $('.money').simpleMoneyFormat();
+      })
+
+      $(document).on("keyup",'.tdBayarActual',function(){
+          var tdBayarActual = $(this).val().replace(',','');
+          var tdHargaBayar = $(this).closest("tr").find('.tdHargaBayar').text().replace(',','');
+          var tdSelisihActual = tdBayarActual-tdHargaBayar
+          $(this).closest("tr").find('.tdSelisihActual').text(tdSelisihActual);
+          $('.money').simpleMoneyFormat();
+          if (tdSelisihActual>= 0 ) {
+            $(this).closest("tr").find('label').attr('class', 'badge badge-gradient-success');
+            $(this).closest("tr").find('label').text("Paid");
+          }else{
+            $(this).closest("tr").find('label').attr('class', 'badge badge-gradient-danger');
+            $(this).closest("tr").find('label').text("Pending");
+          }
+
+      })
+
+      $(document).on("change",'.tdBayarActual',function(){
+          var sum= 0;
+          // iterate through each td based on class and add the values
+          $(".tdBayarActual").each(function() {
+            var value = $(this).val();
+            value = value.replace(',', ''); 
+            if(!isNaN(value) && value.length != 0) {
+                sum+= parseInt(value)
+            }
+          });
+          var grandTotal = $('#grandTotal').val().replace(',','');
+          $('#selisih').val(sum - grandTotal)
+          // console.log(grandTotal)
+          // console.log(sum)
+          $('.money').simpleMoneyFormat();
+      })
+
+    })
+  </script>
+</body>
+
+</html>
+
