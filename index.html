@@ -80,11 +80,24 @@
                       <label for="select">Peserta</label>
                       <select class="form-control" id="select">
                         <option>Ridho</option>
-                        <option>Wahyu</option>
                         <option>Ijul</option>
                         <option>Ruri</option>
                         <option>Fanny</option>
                         <option>Achy</option>
+                        <option>Rolan</option>
+                        <option>Bram</option>
+                        <option>Indra</option>
+                        <option>Slamet</option>
+                        <option>Candra</option>
+                        <option>Febong</option>
+                        <option>Tisya</option>
+                        <option>Iman</option>
+                        <option>Cimam</option>
+                        <option>Wahyu</option>
+                        <option>Fauzi</option>
+                        <option>rudi</option>
+                        <option>weny</option>
+                        <option>Baho</option>
                       </select>
                     </div>
                       <div class="form-group">
@@ -184,7 +197,7 @@
             <td>`+peserta+`</td>
             <td class="tdHargaAplikasi">`+hargaAplikasi+`</td>
             <td class="tdHargaBayar money">0</td>
-            <td><input type="text" class="form-control money tdBayarActual"  placeholder="Bayar Actual"></td>
+            <td><input type="text" class="form-control money tdBayarActual"  placeholder="0"></td>
             <td class="tdSelisihActual money">0</td>
             <td><label class="badge badge-gradient-danger">Pending</label></td>
             <td><a href="#" class="delete"><i class="ti-trash"></i></a></td>
@@ -262,7 +275,27 @@
           $('.money').simpleMoneyFormat();
       })
 
+      $(document).on("change",'#grandTotal',function(){
+        var sum= 0;
+        // iterate through each td based on class and add the values
+        $(".tdHargaAplikasi").each(function() {
+          var value = $(this).text();
+          value = value.replace(',', ''); 
+          sum+= parseInt(value)
+        });
+        $('#totalAplikasi').val(sum)
+        var grandTotal = $('#grandTotal').val().replace(',','');
+        $(".tdHargaAplikasi").each(function() {
+          var value = $(this).text();
+          value = value.replace(',', ''); 
+          var tdHargaBayar = Math.ceil(Math.ceil((parseInt(value)/sum)*parseInt(grandTotal.replace(',','')))/1000)*1000;
+          $(this).closest("tr").find('.tdHargaBayar').text(tdHargaBayar);
+        });
+        $('.money').simpleMoneyFormat();
+      })
+
     })
+    
   </script>
 </body>
 
